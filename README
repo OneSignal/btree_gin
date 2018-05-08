@@ -1,0 +1,22 @@
+This is a fork of btree_gin extension. The original project is located at
+https://git.postgresql.org/git/postgresql.git, contrib/btree_gin directory.
+
+In this fork, support for uuid columns is added for btree_gin for PostgreSQL
+9.5 and 10. Although the extension has the same version (1.3) as in the
+upstream master branch, this extension is not fully compatible with the
+upstream extension: only support for uuid has been added to the fork.
+
+Installation
+
+1. Install development files for the corresponding PostgreSQL version, for
+example:
+
+postgresql-server-dev-9.5
+
+2. In the project root directory execute:
+
+make USE_PGXS=1 install
+
+3. In the psql session execute:
+
+ALTER EXTENSION btree_gin UPDATE TO '1.3';
